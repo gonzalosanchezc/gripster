@@ -1,0 +1,339 @@
+/* Estilos generales - Versión Premium Oscura */
+:root {
+    --primary: #ff3333;
+    --primary-dark: #cc0000;
+    --primary-light: #ff6666;
+    --black: #0a0a0a;
+    --dark-gray: #1a1a1a;
+    --medium-gray: #2a2a2a;
+    --light-gray: #e0e0e0;
+    --text-light: #f5f5f5;
+    --text-gray: #b0b0b0;
+    --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-light);
+    margin: 0;
+    padding-top: 80px;
+    line-height: 1.7;
+    min-height: 100vh;
+    font-weight: 350;
+}
+
+/* Contenedor principal */
+.results-section-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* Título de búsqueda - Estilo Premium */
+#txt-search {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#txt-search::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px;
+    transform-origin: left;
+    animation: lineGrow 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    box-shadow: 0 2px 8px var(--primary-light);
+}
+
+@keyframes lineGrow {
+    0% { transform: scaleX(0); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 1; }
+}
+
+/* Tarjetas de llantas - Estilo Premium Oscuro */
+.control-cards-tires {
+    margin-bottom: 40px;
+    perspective: 1200px;
+}
+
+.cards-tires-results {
+    display: flex;
+    background: var(--dark-gray);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cards-tires-results:hover {
+    box-shadow: 0 12px 40px rgba(255, 0, 0, 0.15);
+    transform: translateY(-8px) rotateX(1.5deg);
+    border-color: rgba(255, 51, 51, 0.1);
+}
+
+.cards-tires-results::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cards-tires-results:hover::before {
+    width: 6px;
+    opacity: 0.9;
+    box-shadow: 0 0 15px var(--primary-light);
+}
+
+.left-card-side {
+    flex: 1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    background: var(--medium-gray);
+}
+
+.left-card-side::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,51,51,0.1) 0%, rgba(255,51,51,0) 70%);
+    transform: scale(0);
+    transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform;
+}
+
+.cards-tires-results:hover .left-card-side::after {
+    transform: scale(1);
+}
+
+.tire-crop {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
+    transform: translateZ(0);
+    position: relative;
+    z-index: 2;
+}
+
+.cards-tires-results:hover .tire-crop {
+    transform: scale(1.08) translateZ(20px);
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.7));
+}
+
+.left-card-side h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0;
+    color: var(--text-light);
+    text-align: center;
+    letter-spacing: -0.3px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.left-card-side h3::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 2px 8px var(--primary-light);
+}
+
+.cards-tires-results:hover .left-card-side h3::after {
+    width: 60px;
+}
+
+.right-card-side {
+    flex: 1.5;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.right-card-side p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    position: relative;
+    padding-left: 20px;
+    font-weight: 350;
+}
+
+.right-card-side p::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+.right-card-side p:hover::before {
+    transform: translateX(3px);
+}
+
+.right-card-side p strong {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.right-card-side form {
+    margin-top: 30px;
+}
+
+.right-card-side button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 100%;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 51, 51, 0.3);
+    z-index: 1;
+}
+
+.right-card-side button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    transition: all 0.8s ease;
+    z-index: -1;
+}
+
+.right-card-side button:hover {
+    background: var(--primary-dark);
+    box-shadow: 0 6px 25px rgba(255, 51, 51, 0.4);
+    letter-spacing: 1.5px;
+}
+
+.right-card-side button:hover::before {
+    left: 100%;
+}
+
+.right-card-side button:disabled {
+    background: var(--black);
+    color: var(--medium-gray);
+    cursor: not-allowed;
+    box-shadow: none;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Sin resultados - Estilo Premium */
+.no-results {
+    text-align: center;
+    padding: 100px 20px;
+    background: var(--dark-gray);
+    border-radius: 6px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.no-results p {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.no-results p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.no-results p:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+    box-shadow: 0 2px 8px var(--primary-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-tires-results {
+        flex-direction: column;
+    }
+    
+    .left-card-side {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 30px;
+    }
+    
+    .right-card-side {
+        padding-top: 30px;
+    }
+    
+    #txt-search {
+        font-size: 2rem;
+    }
+    
+    .tire-crop {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,42 @@
+header {
+    height: 100vh;
+    position: relative;
+        user-select: none;
+        -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
+        -moz-user-select: none; /* Para Firefox */
+        -ms-user-select: none; /* Para Internet Explorer/Edge */
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.slogan-container {
+    position: absolute;
+    top: 12%; 
+    left: 5%; 
+    text-align: left;
+    color: white;
+    width: 90%;
+    max-width: 800px;
+}
+
+.slogan {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+.sub-slogan {
+    font-size: 2rem; 
+    margin-top: 10px;
+    font-weight: 500;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+

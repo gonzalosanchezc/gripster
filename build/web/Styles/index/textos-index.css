@@ -1,0 +1,118 @@
+/* Destacar texto del header (slogan) */
+.red {
+    color: #FFFB00;
+}
+
+/* CONTENEDOR GENERAL */
+.llantas-categories {
+    background-color: #f8f9fa;
+    padding-bottom: 3rem;
+}
+
+.llantas-categories h2 {
+    font-weight: 700;
+    color: #222;
+}
+
+/* TARJETA DE CATEGORÍA */
+.category-card .card {
+    border-radius: 6px; /* Border-radius más sutil */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: none;
+    height: 320px; /* Más bajita */
+    min-width: 280px;
+    position: relative;
+}
+
+.category-card .card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    filter: brightness(0.8); /* Imagen ligeramente oscurecida */
+}
+
+/* CAPA DE TEXTO ENCIMA DE LA IMAGEN */
+.category-card .card-img-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.8); /* Mejor legibilidad del texto */
+}
+
+.category-card .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+}
+
+.category-card .card-text {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.category-card .btn-primary {
+    background-color: #00a8ff;
+    border: none;
+    border-radius: 30px;
+    padding: 6px 18px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* FLECHAS DE NAVEGACIÓN PERSONALIZADAS */
+.llantas-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.llantas-carousel .owl-nav button {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 44px;
+    height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.llantas-carousel .owl-nav button:hover {
+    background-color: #00a8ff !important;
+}
+
+.llantas-carousel .owl-nav button span {
+    font-size: 20px;
+    margin-top: 1px; /* Centra mejor el ícono */
+}
+
+/* Ajuste de altura para alinear tarjetas */
+.llantas-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.llantas-carousel .owl-item {
+    display: flex;
+    height: auto;
+}

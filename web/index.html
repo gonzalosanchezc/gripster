@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/company/1.png">
+    <title>Gripster: Tecnología e innovación | Gripster</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="Styles/general/navbar-transparent.css">
+    <link rel="stylesheet" href="Styles/general/allStyles.css">
+    <link rel="stylesheet" href="Styles/index/header-index.css">
+    <link rel="stylesheet" href="Styles/index/form-search-tyres.css">
+    <link rel="stylesheet" href="Styles/index/textos-index.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () 
+        {
+            fetch("SvCookieSession")
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Sesión validada:", data);
+                })
+                .catch(error => console.error("Error en sesión:", error));
+        });
+    </script>
+
+    <header>
+        <!--
+                        <video autoplay muted loop>
+                            <source src="Images/company/background.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+            -->
+        <!-- Mostrar el vídeo solo si el contenido ha sido totalmente cargado -->
+        <video id="background-video" muted loop>
+            <source src="Images/company/background1.mp4" type="video/mp4">
+        </video>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () 
+            {
+                const video = document.getElementById("background-video");
+                video.setAttribute("autoplay", "true");
+            });
+        </script>
+
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Images/company/1.svg" alt="Logo de Gripster" width="30" height="30"
+                         class="d-inline-block align-text-top">
+                    G&nbsp;R&nbsp;I&nbsp;P&nbsp;S&nbsp;T&nbsp;E&nbsp;R
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-3">
+                            <a class="nav-link underline-link" id="consejos-link" href="index.html">
+                                <i class="bi bi-car-front"></i> Cómo escoger mi neumático
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link special-link" id="cart-icon" href="login.jsp">
+                                <i class="bi bi-person"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link special-link" id="cart-icon" href="SvCarrito">
+                                <i class="bi bi-cart4"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="slogan-container">
+            <h1 class="slogan">Tu <span class="red">mejor viaje</span> <br> comienza con <span
+                    class="red">Gripster</span></h1>
+            <p class="sub-slogan">No te limites a llegar, deja tu huella en cada kilómetro.</p>
+        </div>
+
+        <div class="container formulario-llantas">
+            <form class="row gx-2 gy-2 align-items-center p-3" action="SvBuscarLlantasPrincipal" method="POST">
+                <div class="col-12">
+                    <div class="row gx-2 gy-2">
+                        <div class="col-4">
+                            <select class="form-select" name="ancho" id="anchoLlanta" required>
+                                <option value="" disabled selected>Ancho</option>
+                                <option value="175">175</option>
+                                <option value="185">185</option>
+                                <option value="195">195</option>
+                                <option value="205">205</option>
+                                <option value="215">215</option>
+                                <option value="225">225</option>
+                                <option value="235">235</option>
+                                <option value="245">245</option>
+                                <option value="255">255</option>
+                                <option value="265">265</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select" name="perfil" id="perfilLlanta" required>
+                                <option value="" disabled selected>Serie</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                                <option value="60">60</option>
+                                <option value="65">65</option>
+                                <option value="70">70</option>
+                                <option value="75">75</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <select class="form-select" name="diametro" id="diametroLlanta" required>
+                                <option value="" disabled selected>Tamaño del rin</option>
+                                <option value="13">R13</option>
+                                <option value="14">R14</option>
+                                <option value="15">R15</option>
+                                <option value="16">R16</option>
+                                <option value="17">R17</option>
+                                <option value="18">R18</option>
+                                <option value="19">R19</option>
+                                <option value="20">R20</option>
+                                <option value="21">R21</option>
+                                <option value="22">R22</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn mt-2 w-100">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

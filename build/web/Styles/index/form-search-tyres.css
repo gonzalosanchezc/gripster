@@ -1,0 +1,55 @@
+.formulario-llantas {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1100px;
+    padding: 20px;
+    border-radius: 2px;
+}
+
+.formulario-llantas h2 {
+    font-size: 1.6rem;
+}
+
+.formulario-llantas a {
+    text-decoration: underline;
+    transition: all ease 0.3s;
+}
+
+.btn {
+    font-size: 1.1rem !important;
+    letter-spacing: 2px !important;
+    border-radius: 20px !important;
+    height: 40px;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.466) !important;
+    color: black !important;
+    transition: all ease 0.4s;
+    font-weight: 600 !important;
+}
+
+
+.btn:hover {
+    background-color: hsla(0, 0%, 100%, 0.258) !important;
+    color: white !important;
+}
+
+
+.form-select {
+    border-radius: 20px !important;
+    height: 40px;
+    width: 90px;
+    background-color: hsla(0, 0%, 100%, 0.466) !important;
+    color: black !important; 
+    border-radius: 15px; 
+    padding: 10px; 
+    font-weight: bold;
+    text-align: center;
+}
+
+.llantas-link  a{
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+}
